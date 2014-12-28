@@ -1,23 +1,22 @@
-//Tabela wielowymiarowa
 #include <stdio.h>
-float Tablica[4][5];
-int licz1, licz2;
+
+int Tablica[2][12] = {{31,29,31,30,31,30,31,31,30,31,30,31}, {31,28,31,30,31,30,31,31,30,31,30,31}};
+int a, b;
+
 int main()
 {
-    for (licz1 = 0; licz1 < 4; licz1++)
-    {
-        for (licz2 = 0; licz2 < 5; licz2++)
-        {
-            printf("\n\n Wpisz srednią ocen %d-tego ucznia %d-tej klasy: ", licz1+1, licz2+1);
-            scanf("%f", &Tablica[licz1][licz2]);
-        }    
-    }
-for (licz1 = 0; licz1 < 4; licz1++)
-{
-    for (licz2 = 0; licz2 < 5; licz2++)
-    {
-        printf("średnia ocen %d-ego ucznia %d-tej klasy wynosi: %.2f\n", licz1+1, licz2+1, Tablica[licz1][licz2]);
-    }
-}    
-            return 0;
+  for (a=0; a<2; a++)
+  {
+      for (b=0; b<12; b++)
+      { 
+          if (a==0)
+          {
+             printf("Miesiąc %d, roku przestępnego ma %d dni\n", b+1, Tablica[a][b] ); 
+          }
+          else
+          {
+             printf("Miesiąc %d, roku nieprzestępnego ma %d dni\n", b+1, Tablica[a][b] ); 
+          }
+      }
+  }
 }
