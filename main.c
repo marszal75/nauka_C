@@ -1,33 +1,42 @@
-//Program zliczający największą wartość w tablicy
+//Program zliczający dwie tablice o tym samym rozmiarze
 
 #include <stdio.h>
-#define rozm 10
-int tab[rozm];
-int licznik;
-int maksimum(int x[], int y);
-
+#define rozm 5
+int i, Tab1[rozm], Tab2[rozm];
+int suma1, suma2, sumasum;
 int main()
 {
-    for (licznik = 0; licznik < rozm; licznik++)
+    // Tablica 1
+    for (i=0; i<rozm; i++)
     {
-        printf("wprowadź wartości tablicy: ");
-        scanf("%d", &tab[licznik]);
+        printf("Podaj wartości tablicy: \n");
+        scanf("%d", &Tab1[i]);
+        suma1 += Tab1[i];
     }
-    for (licznik = 0; licznik < rozm; licznik++)
+    printf("Wartości tablicy to: ");
+    for (i=0; i<rozm; i++)
+    
+        printf(" %d,", Tab1[i]);
+    
+    printf("\n");
+    // Tablica 2
+    for (i=0; i<rozm; i++)
     {
-        printf("%d, ", tab[licznik]);
+        printf("Podaj wartości drugiej tablicy: \n");
+        scanf("%d", &Tab2[i]);
+        suma2 += Tab1[i];
     }
-    printf("\nNajwiększa wartość to: %d", maksimum(tab, rozm));
+    printf("Wartości drugiej tablicy to: ");
+    for (i=0; i<rozm; i++)
+    
+        printf(" %d,", Tab2[i]);
+    
+    printf("\n");
+    printf("suma elementów tablicy 1 = %d\n", suma1);
+    printf("suma elementów tablicy 2 = %d\n", suma2);
+    sumasum = suma1 + suma2;
+    printf(" Suma sum = %d", sumasum);
     return 0;
-}
-int maksimum( int x[], int y )
-{
-    int licz;
-    int maksim = 0;
-    for (licz = 0; licz < y; licz++)
-    {
-        if (x[licz] > maksim)
-            maksim = x[licz];
-    }
-    return maksim;
+        
+    
 }
