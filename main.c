@@ -24,7 +24,7 @@ int main()
     {
         printf("Podaj wartości drugiej tablicy: \n");
         scanf("%d", &Tab2[i]);
-        suma2 += Tab1[i];
+        suma2 += Tab2[i];
     }
     printf("Wartości drugiej tablicy to: ");
     for (i=0; i<rozm; i++)
